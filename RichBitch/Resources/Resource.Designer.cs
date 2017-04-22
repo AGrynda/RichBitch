@@ -63,11 +63,20 @@ namespace RichBitch
 			// aapt resource value: 0x7f050003
 			public const int addButton = 2131034115;
 			
+			// aapt resource value: 0x7f050006
+			public const int amountTextView = 2131034118;
+			
 			// aapt resource value: 0x7f050001
 			public const int balanceTextView = 2131034113;
 			
+			// aapt resource value: 0x7f050005
+			public const int currencyTextView = 2131034117;
+			
 			// aapt resource value: 0x7f050002
 			public const int portmoneButton = 2131034114;
+			
+			// aapt resource value: 0x7f050004
+			public const int portmoneList = 2131034116;
 			
 			// aapt resource value: 0x7f050000
 			public const int textView1 = 2131034112;
@@ -90,6 +99,9 @@ namespace RichBitch
 			
 			// aapt resource value: 0x7f030001
 			public const int PortmoneList = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int PortmoneListItemView = 2130903042;
 			
 			static Layout()
 			{

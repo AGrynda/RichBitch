@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace RichBitch
@@ -8,9 +9,9 @@ namespace RichBitch
         private readonly CurrencyConverter _converter;
         private readonly Dictionary<Currency, double> _portmone;
 
-        public BalanceManager()
+        public BalanceManager(CurrencyConverter currencyConverter)
         {
-            _converter = new CurrencyConverter();
+            _converter = currencyConverter;
             _portmone = new Dictionary<Currency, double>();
             Init();
         }
@@ -22,6 +23,10 @@ namespace RichBitch
             _portmone.Add(Currency.UAH, 700);
             _portmone.Add(Currency.USD, 233);
         }
+
+        public List<Tuple<string, double>> PortmoneList => _portmone
+            .Select(item => new Tuple<string, double>(item.Key.ToString(), item.Value))
+            .ToList();
 
         public void Add(Currency currency, double amount)
         {

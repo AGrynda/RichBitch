@@ -3,6 +3,7 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Views;
+using Autofac;
 
 namespace RichBitch
 {
@@ -20,14 +21,16 @@ namespace RichBitch
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            _balanceManager = new BalanceManager();
+            _balanceManager = DIService.Container.Resolve<BalanceManager>();
+
             _balanceTextView = FindViewById<TextView>(Resource.Id.balanceTextView);
             _portmoneListButton = FindViewById<Button>(Resource.Id.portmoneButton);
             _addButton = FindViewById<Button>(Resource.Id.addButton);
 
             _portmoneListButton.Click += OnPortmoneButtonClick;
+            _addButton.Click += OnPortmoneButtonClick;
 
-            _balanceTextView.Text = _balanceManager.GetBalance().ToString();
+            _balanceTextView.Text = _balanceManager.GetBalance() + " " + Currency.USD;
         }
 
         private void OnPortmoneButtonClick(object sender, EventArgs e)
