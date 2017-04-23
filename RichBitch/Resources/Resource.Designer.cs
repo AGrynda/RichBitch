@@ -45,7 +45,13 @@ namespace RichBitch
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ic_account_balance_wallet_blue_dark_48dp = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int ic_add_circle_blue_dark_48dp = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Icon = 2130837506;
 			
 			static Drawable()
 			{
@@ -60,23 +66,26 @@ namespace RichBitch
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050003
-			public const int addButton = 2131034115;
+			// aapt resource value: 0x7f050004
+			public const int addButton = 2131034116;
 			
-			// aapt resource value: 0x7f050006
-			public const int amountTextView = 2131034118;
+			// aapt resource value: 0x7f050007
+			public const int amountTextView = 2131034119;
 			
 			// aapt resource value: 0x7f050001
 			public const int balanceTextView = 2131034113;
 			
+			// aapt resource value: 0x7f050006
+			public const int currencyTextView = 2131034118;
+			
+			// aapt resource value: 0x7f050003
+			public const int portmoneButton = 2131034115;
+			
 			// aapt resource value: 0x7f050005
-			public const int currencyTextView = 2131034117;
+			public const int portmoneList = 2131034117;
 			
 			// aapt resource value: 0x7f050002
-			public const int portmoneButton = 2131034114;
-			
-			// aapt resource value: 0x7f050004
-			public const int portmoneList = 2131034116;
+			public const int relativeLayout1 = 2131034114;
 			
 			// aapt resource value: 0x7f050000
 			public const int textView1 = 2131034112;

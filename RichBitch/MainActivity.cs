@@ -12,8 +12,8 @@ namespace RichBitch
     {
         private BalanceManager _balanceManager;
         private TextView _balanceTextView;
-        private Button _portmoneListButton;
-        private Button _addButton;
+        private ImageButton _portmoneListButton;
+        private ImageButton _addButton;
             
         protected override void OnCreate(Bundle bundle)
         {
@@ -24,8 +24,8 @@ namespace RichBitch
             _balanceManager = DIService.Container.Resolve<BalanceManager>();
 
             _balanceTextView = FindViewById<TextView>(Resource.Id.balanceTextView);
-            _portmoneListButton = FindViewById<Button>(Resource.Id.portmoneButton);
-            _addButton = FindViewById<Button>(Resource.Id.addButton);
+            _addButton = FindViewById<ImageButton>(Resource.Id.addButton);
+            _portmoneListButton = FindViewById<ImageButton>(Resource.Id.portmoneButton);
 
             _portmoneListButton.Click += OnPortmoneButtonClick;
             _addButton.Click += OnPortmoneButtonClick;

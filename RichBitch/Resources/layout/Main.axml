@@ -10,23 +10,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:layout_margin="10dp" />
     <TextView
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/balanceTextView"
-        android:gravity="center_horizontal" />
-    <Button
-        android:text="Portmone"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp" />
+    <RelativeLayout
+        android:minWidth="25dp"
+        android:minHeight="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/portmoneButton"
-        android:gravity="center" />
-    <Button
-        android:text="Add"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addButton" />
+        android:id="@+id/relativeLayout1"
+        android:layout_margin="10dp">
+        <ImageButton
+            android:src="@drawable/ic_account_balance_wallet_blue_dark_48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/portmoneButton"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true" />
+        <ImageButton
+            android:src="@drawable/ic_add_circle_blue_dark_48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addButton"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 </LinearLayout>
