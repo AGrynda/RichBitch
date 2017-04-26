@@ -28,9 +28,14 @@ namespace RichBitch
             _portmoneListButton = FindViewById<ImageButton>(Resource.Id.portmoneButton);
 
             _portmoneListButton.Click += OnPortmoneButtonClick;
-            _addButton.Click += OnPortmoneButtonClick;
+            _addButton.Click += OnAddButtonClick;
 
             _balanceTextView.Text = _balanceManager.GetBalance() + " " + Currency.USD;
+        }
+
+        private void OnAddButtonClick(object sender, EventArgs e)
+        {
+            StartActivity(typeof(AddCashActivity));
         }
 
         private void OnPortmoneButtonClick(object sender, EventArgs e)

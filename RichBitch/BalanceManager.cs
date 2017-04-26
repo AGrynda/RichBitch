@@ -7,6 +7,7 @@ namespace RichBitch
     public class BalanceManager
     {
         private readonly CurrencyConverter _converter;
+        private readonly ExchangeService _exchangeService;
         private readonly Dictionary<Currency, double> _portmone;
 
         public BalanceManager(CurrencyConverter currencyConverter)
@@ -42,6 +43,7 @@ namespace RichBitch
 
         public double GetBalance(Currency currency = Currency.USD)
         {
+            _exchangeService.GetLatest();
             return _portmone.Sum(cash => _converter.Convert(cash.Key, currency, cash.Value));
         }
     }

@@ -6,6 +6,7 @@ namespace RichBitch
     public class CurrencyConverter
     {
         private readonly Dictionary<Tuple<Currency, Currency>, double> _exchangeRates;
+        private readonly ExchangeService _exchangeService = new ExchangeService();
 
         public CurrencyConverter()
         {
